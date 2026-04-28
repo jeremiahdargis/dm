@@ -88,7 +88,7 @@ body {
     width: 100%;
 }
 /* The Arrow Icon Button */
-.search-arrow {
+.search-arrow {x
     position: absolute;
     right: 10px; /* Pins it to the right */
     background: #7c3aed; /* Matches your purple theme */
@@ -302,6 +302,7 @@ body {
 
 /* 1. Main Guide Container */
 .project-guide-section {
+    max-width: 100%;
     width: 100%;
     margin-top: 60px; /* Spacing below the images */
     margin-bottom: 80px;
@@ -320,7 +321,8 @@ body {
     color: #4b5563; /* Subtle text color */
     font-size: 1.25rem;
     line-height: 1.8;
-    max-width: 900px; /* Limits width for readability */
+    max-width: 100%; /* Limits width for readability */
+    width: 100%;
     margin-bottom: 50px;
 }
 
