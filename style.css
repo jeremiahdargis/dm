@@ -128,38 +128,60 @@ body {
     box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.35);
 }
 
-/* Container for the tags under the search bar */
+/* Container for the tiles */
+.quick-tiles {
+    margin-top: 25px;
+    display: grid;
+    /* This creates 5 equal columns that adjust on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
 
-.quick-tags {
-    margin-top: 25px; /* Space between search bar and pills */
+/* The Tile Design */
+.vibe-tile {
+    background-color: #f1f5f9; /* Lightish grey */
+    text-decoration: none;
+    padding: 20px;
+    height: 100px; /* Taller than a pill */
+    border-radius: 16px;
     display: flex;
-    flex-wrap: wrap; /* Allows them to wrap to a new line on mobile */
-    gap: 12px; /* for spacing between pills */
-    align-items: center;
-}
-
-/* The "Popular:" text style */
-.tag-label {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #000000;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-right: 5px;
-}
-
-/* Adjusting the pill size for this specific area */
-.quick-tags .vibe-pill-link {
-    font-size: 0.75rem; /* Slightly smaller than the table pills */
-    padding: 6px 14px;
-    background-color: #ede9fe; /* Very light purple */
+    flex-direction: column;
+    justify-content: space-between; /* Space between text and arrow */
+    transition: all 0.3s ease;
     border: 1px solid transparent;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.quick-tags .vibe-pill-link:hover {
-    background-color: #ede9fe; /* Turns purple on hover */
-    border-color: #7c3aed;
+.tile-text {
+    color: #475569;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.tile-arrow {
     color: #7c3aed;
+    font-size: 1.1rem;
+    align-self: flex-end; /* Arrow stays in bottom right */
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Hover Effects */
+.vibe-tile:hover {
+    background-color: #ffffff;
+    border-color: #7c3aed;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(124, 58, 237, 0.1);
+}
+
+.vibe-tile:hover .tile-text {
+    color: #7c3aed;
+}
+
+.vibe-tile:hover .tile-arrow {
+    transform: translateX(5px);
 }
 
 
