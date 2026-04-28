@@ -53,7 +53,7 @@ body {
     background-color: #2dd4bf; 
     
     /* Change text to white so it's readable on the teal */
-    color: #000000; 
+    color: #4c1d95; 
     
     /* Lift effect */
     transform: translateY(-2px);
@@ -163,7 +163,8 @@ body {
 
 .tile-arrow {
     color: #7c3aed;
-    font-size: 1.1rem;
+    font-size: .85rem;
+    font-weight: 600;
     align-self: flex-end; /* Arrow stays in bottom right */
     transition: transform 0.3s ease;
     display: inline-block;
